@@ -13,10 +13,13 @@ class Home extends Component {
   }
 
   placeSubmitHandler = () => {
+   
     if(this.state.placeName.trim() === '') {
       return;
     }
-    this.props.add(this.state.placeName);
+
+    console.log(this.state.placeName);
+    this.props.add(this.state.placeName);l
 }
 
 placeNameChangeHandler = (value) => {
@@ -44,7 +47,7 @@ render() {
     <View style={ styles.container }>
       <View style = { styles.inputContainer }>
         <TextInput
-          placeholder = "Enter text"
+          placeholder = " Enter name ..."
           style = { styles.placeInput }
           value = { this.state.placeName }
           onChangeText = { this.placeNameChangeHandler }
